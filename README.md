@@ -118,4 +118,4 @@ $(".js-menu").singlePageNavigation({
 
 # Demo
 
-<a href="http://davinskiy.github.io/singlePageNavigation/index.html" title="http://davinskiy.github.io/singlePageNavigation/index.html" alt="http://davinskiy.github.io/singlePageNavigation/index.html" target="_blank">Demo</a>
+<a href="https://davinskiy.github.io/single-page-navigation/index.html" title="https://davinskiy.github.io/single-page-navigation/index.html" alt="https://davinskiy.github.io/single-page-navigation/index.html" target="_blank">Demo</a>
