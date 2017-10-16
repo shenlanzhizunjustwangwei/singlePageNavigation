@@ -48,6 +48,7 @@ $(".js-menu").singlePageNavigation({
 	delay : 0,
 	ease : "swing",
 	offset : headerH,
+	scrollingOffsetBottom : 0.4, // 0.00 - 1.00 - percents, 1 - xxx - pixels
 	changeAddress : false,
 	currentClickable : true,
 	beforeScrolling : function(){
