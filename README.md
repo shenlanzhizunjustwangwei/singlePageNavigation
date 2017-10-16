@@ -1,16 +1,45 @@
 # singlePageNavigation
 jQuery Single Page Navigation Plugin
 
+jQuery plugin for single-page sites, which allows you to check the active item in the menu and smoothly scroll through the page.
+
 # Usage
 
 <code>
-	<pre>
-	$(".js-menu").singlePageNavigation({
-		current : "active",
-		duration : 500
-	});
-	</pre>
+<pre>
+$(".js-menu").singlePageNavigation({
+	current : "active",
+	duration : 500
+});
+</pre>
 </code>
+
+# Advanced Usage
+
+<code>
+<pre>
+$(".js-menu").singlePageNavigation({
+	exceptClass : "menu__element_except",
+	disabledClass : "menu__element_no-clickable",
+	current : "active",
+	duration : 500,
+	delay : 300,
+	ease : "swing",
+	offset : header,
+	offsetDynamic : 'innerHeight',
+	scrollingOffsetBottom : 0.4, 
+	changeAddress : false,
+	currentClickable : true,
+	beforeScrolling : function(){
+		console.log("start scrolling");
+	},
+	finishScrolling : function(){
+		console.log("finish scrolling");
+	}
+});
+</pre>
+</code>
+
 
 # Options
 
@@ -89,4 +118,4 @@ jQuery Single Page Navigation Plugin
 
 # Demo
 
-<a href="http://google.ru" target="_blank">Demo Site link</a>
+<a href="http://davinskiy.github.io/singlePageNavigation/index.html" title="http://davinskiy.github.io/singlePageNavigation/index.html" alt="http://davinskiy.github.io/singlePageNavigation/index.html" target="_blank">Demo</a>
