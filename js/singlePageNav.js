@@ -24,11 +24,11 @@
 				options.ease = options.ease || "swing";
 				options.offset = options.offset || 0;
 				options.offsetDynamic = options.offsetDynamic || false;
-				options.scrollingOffsetBottom = options.scrollingOffsetBottom || 0;
+				options.scrollingOffsetBottom = options.scrollingOffsetBottom || 0.4;
 				options.changeAddress = options.changeAddress || false;
 				options.currentClickable = options.currentClickable || true;
 				options.beforeScrolling = options.beforeScrolling || null;
-				options.finishScrolling = (options.finishScrolling)? options.finishScrolling : null;
+				options.finishScrolling = options.finishScrolling || null;
 
 				var menu_items_li = $(container).children("li");
 				var menu_items_a = $(container).find("a");
@@ -126,7 +126,9 @@
 								complete : function(){
 									if(!completeCalled){
 										completeCalled = true;
-										options.finishScrolling();
+										if (options.finishScrolling) {
+											options.finishScrolling();
+										}
 									}
 								}
 							});

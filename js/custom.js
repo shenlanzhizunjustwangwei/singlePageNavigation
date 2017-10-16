@@ -39,7 +39,7 @@ function menuShowHide(speed){
 
 $(".js-menu").singlePageNavigation({
 	exceptClass : "menu__element_except",			// Class of items that except (will clickable, but not shine), default:  ""
-	disabledClass : "menu__element_no-clickable",	// 	Class of items that disable (will shine, but not clickable), default:  ""
+	disabledClass : "menu__element_no-clickable",	// Class of items that disable (will shine, but not clickable), default:  ""
 	current : "active",								// Current nav item class name, default:  "current"
 	duration : 500,									// Scrolling speed (ms), default:  700
 	delay : 300,									// Delay before scrolling, default:  0
