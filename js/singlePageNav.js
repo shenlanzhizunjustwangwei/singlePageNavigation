@@ -23,6 +23,7 @@
 				options.delay = options.delay || 0;
 				options.ease = options.ease || "swing";
 				options.offset = options.offset || 0;
+				options.offsetDynamic = options.offsetDynamic || false;
 				options.scrollingOffsetBottom = options.scrollingOffsetBottom || 0;
 				options.changeAddress = options.changeAddress || false;
 				options.currentClickable = options.currentClickable || true;
@@ -95,11 +96,26 @@
 							}
 						}
 
+
 						// Position to scroll with offset
-						var scrollTo = $($(this).attr("href")).offset().top - options.offset;
+						var scrollTo = $($(this).attr("href")).offset().top;
 						var completeCalled = false;
 
 						setTimeout(function(){
+
+							var offset_top = options.offset;
+
+							// Setting dynamic height, if we choose it
+							if (options.offsetDynamic !== false) {
+								switch(options.offsetDynamic){
+									case 'height': offset_top = offset_top.height(); break;
+									case 'innerHeight': offset_top = offset_top.innerHeight(); break;
+									case 'outerHeight': offset_top = offset_top.outerHeight(); break;
+									default: offset_top = 0;
+								}
+							}
+
+							scrollTo -= offset_top;
 
 							// Scrolling to the position that we need
 							$('html, body').animate({
