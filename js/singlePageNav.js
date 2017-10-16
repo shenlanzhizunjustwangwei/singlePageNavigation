@@ -26,7 +26,7 @@
 				options.scrollingOffsetBottom = options.scrollingOffsetBottom || 0;
 				options.changeAddress = options.changeAddress || false;
 				options.currentClickable = options.currentClickable || true;
-				options.beforeScrolling = options.beforeScrolling || function(){};
+				options.beforeScrolling = options.beforeScrolling || null;
 				options.finishScrolling = (options.finishScrolling)? options.finishScrolling : null;
 
 				var menu_items_li = $(container).children("li");
