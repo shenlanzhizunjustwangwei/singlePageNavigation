@@ -45,7 +45,10 @@
 							if(menu_items_li.eq(i).hasClass(options.exceptClass)){
 								continue;
 							}
-							var item_pos = $(menu_items_a.eq(i).attr("href")).offset().top;
+							var this_id = menu_items_a.eq(i).attr("href");
+							var this_section = $(this_id);
+							var item_pos = this_section.offset().top;
+
 
 							if (doc_view > item_pos) {
 								menu_items_li.removeClass("active");
@@ -85,8 +88,9 @@
 						if (options.changeAddress) {
 							try {
 								history.pushState(null, null, $(this).attr("href"));
-							} catch(e) {}
-							location.hash = '#' + $(this).attr("href");
+							} catch(e) {
+								location.hash = $(this).attr("href");
+							}
 						}
 
 						// Position to scroll with offset
